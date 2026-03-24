@@ -137,11 +137,12 @@ export default function App() {
     <div className="min-h-screen bg-neutral-50 font-sans text-neutral-800">
       
       <nav className="sticky top-0 z-40 bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex justify-center md:justify-between items-center relative">
           <div className="flex items-center gap-1">
             <img src="/logo.png" alt="Logo Tacorner" className="h-12 w-auto" />
           </div>
-          <button 
+          <div className="absolute right-4 md:static">
+            <button 
             onClick={() => setIsCartOpen(true)}
             className="relative p-2 bg-neutral-100 rounded-full hover:bg-neutral-200 transition-colors"
           >
@@ -151,7 +152,8 @@ export default function App() {
                 {totalItems}
               </span>
             )}
-          </button>
+            </button>
+          </div>
         </div>
       </nav>
 
