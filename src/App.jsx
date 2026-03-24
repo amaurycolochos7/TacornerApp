@@ -256,11 +256,15 @@ export default function App() {
               <img src="/logo.png" alt="Logo Tacorner" className="h-10 w-auto" />
             </div>
             <p className="text-sm mb-4">Los mejores tacos y quesadillas de Providencia. Calidad y sabor en cada mordida.</p>
-            <div className="flex flex-col gap-2 mb-4 text-sm text-neutral-400">
-              <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> {RESTAURANT_INFO.phone}</span>
-              <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> {RESTAURANT_INFO.email}</span>
+            <div className="flex flex-col gap-3 mb-6">
+              <a href={`tel:+${RESTAURANT_INFO.whatsappNumber}`} className="inline-flex items-center gap-2 text-sm font-bold text-white bg-neutral-800 hover:bg-neutral-700 w-fit px-4 py-2 rounded-lg transition-colors border border-neutral-700">
+                <Phone className="w-4 h-4 text-green-400" /> {RESTAURANT_INFO.phone}
+              </a>
+              <a href={`mailto:${RESTAURANT_INFO.email}`} className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors w-fit px-1">
+                <Mail className="w-4 h-4" /> {RESTAURANT_INFO.email}
+              </a>
             </div>
-            <a href={RESTAURANT_INFO.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+            <a href={RESTAURANT_INFO.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors px-1">
               <Facebook className="w-5 h-5" />
               <span>Síguenos en Facebook</span>
             </a>
